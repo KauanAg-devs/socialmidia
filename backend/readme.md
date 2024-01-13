@@ -31,5 +31,5 @@
       Caso o usuário deslogue, o valor do token será alterado para 'null', e caso o usuário relogue, o token será realterado para o _id do usuário;
       Caso o token seja null, o usuário não poderá alterar ou deletar os dados da conta;
      
-   PUBLISHES - SESSÃO DAS PUBLICAÇÕES:
+    PUBLISHES - SESSÃO DAS PUBLICAÇÕES:
  
