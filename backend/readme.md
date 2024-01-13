@@ -1,4 +1,7 @@
-A meta deste projeto é criar uma plataforma de mídias sociais. No final deste projeto, haverá:
+
+
+   Descrição: 
+    A meta deste projeto é criar uma plataforma de mídias sociais. No final deste projeto, haverá:
 
    1- criação de perfis;
    2- adicionar amigos;
@@ -13,9 +16,6 @@ A meta deste projeto é criar uma plataforma de mídias sociais. No final deste 
 
 
 
-
-
-   Descrição: 
 
     USER - SESSÃO DOS DADOS DOS USUÁRIOS
 
