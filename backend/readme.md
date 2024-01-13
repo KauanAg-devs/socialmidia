@@ -3,19 +3,19 @@
    Descrição: 
 
 
-   
+
     A meta deste projeto é criar uma plataforma de mídias sociais. No final deste projeto, haverá:
 
-   1- criação de perfis;
-   2- adicionar amigos;
-   3- compartilhar e criar postagens;
-   4- adicionar comentários em postagens;
-   5- recursos como feed de notícias personalizado; 
-   6- chat em tempo real;
+    1- criação de perfis;
+    2- adicionar amigos;
+    3- compartilhar e criar postagens;
+    4- adicionar comentários em postagens;
+    5- recursos como feed de notícias personalizado; 
+    6- chat em tempo real;
 
-   Caso queira procurar por algum dado específico, pressione 'ctrl+f' e procure por: 
-     "USER" para a sessão de usuários;
-     "PUBLISHES" para a sessão de publicações;
+    Caso queira procurar por algum dado específico, pressione 'ctrl+f' e procure por: 
+    "USER" para a sessão de usuários;
+    "PUBLISHES" para a sessão de publicações;
 
 
 
