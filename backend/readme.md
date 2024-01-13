@@ -1,6 +1,9 @@
 
 
    Descrição: 
+
+
+   
     A meta deste projeto é criar uma plataforma de mídias sociais. No final deste projeto, haverá:
 
    1- criação de perfis;
