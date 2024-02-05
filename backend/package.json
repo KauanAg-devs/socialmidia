@@ -4,19 +4,22 @@
   "description": "A meta deste projeto é criar uma plataforma de mídias sociais. No final deste projeto, haverá:",
   "main": "index.js",
   "scripts": {
-    "dev": "node --env-file ./config/.dev.env --watch -r sucrase/register src/server.ts"
+    "dev": "node --env-file ./config/.dev.env --watch -r sucrase/register src/app.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@types/mongoose": "^5.11.97",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.4"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/jsonwebtoken": "^9.0.5",

@@ -1,23 +1,26 @@
 import express from "express";
 import jwtAuth from "./middlewares/jwtAuth";
+import promiseErrorHandler from "./utils/promiseErrorHandler";
 import UserController from "./controllers/UserController";
 
+
+const {
+  loginHandler, 
+  signinHandler, 
+  deleteHandler, 
+  updateHandler
+} = UserController
 
 
 class RouterManager {
     private manageRouter = express.Router()
 
-    private promiseHandler = <T extends Function> (fn: T) => 
-      (req: express.Request, res: express.Response, next: express.NextFunction) => {
-      Promise.resolve(fn(req, res, next)).catch(next)
-    }
-
     constructor(){
-        this.manageRouter
-        .post('/user/login', this.promiseHandler(UserController.loginHandler))
-        .post('/user/signin', this.promiseHandler(UserController.signinHandler))
-        .put('/user/update', jwtAuth, this.promiseHandler(UserController.updateHandler))
-        .delete('/user/delete', jwtAuth, this.promiseHandler(UserController.deleteHandler))
+      this.manageRouter
+        .post('/user/login', promiseErrorHandler(loginHandler))
+        .post('/user/signin', promiseErrorHandler(signinHandler))
+        .put('/user/update', jwtAuth, promiseErrorHandler(updateHandler))
+        .delete('/user/delete', jwtAuth, promiseErrorHandler(deleteHandler))
     }
     
     get router(){
@@ -25,4 +28,5 @@ class RouterManager {
     }
 }
 
-export default new RouterManager().router
+const router = new RouterManager().router
+export default router

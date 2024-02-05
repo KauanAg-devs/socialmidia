@@ -18,7 +18,8 @@
 
      SOBRE O LOGIN E SIGNIN
       O signin conta será feito pelo nome, email e senha;
-      O login de uma conta será feito pelo nome ou email e senha;
+      O login de uma conta será feito pelo nome ou email e senha, ou pelo Google;
+
 
      SOBRE OS TOKENS; 
       Após o usuário logar ou cadastrar, um token contendo o seu _id (mongoose) será ativado;

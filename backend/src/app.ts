@@ -1,36 +1,24 @@
-//libraries
-import express, {Request, Response} from 'express'
-import cors from 'cors'
-//components
 import connectDb from './db/connectdb'
-import router from './router'
-
+import Server from './server'
 
 class App {
-    public app: express.Application
+  constructor() {
+    this.init()
+  }
 
-    constructor(){
-        this.app = express()
+  async init() {
+    await this.database()
+    this.server()
+  }
 
-        this.database()
-        this.middlewares()
-        this.router()
+  async database() {
+    await connectDb() //connectDb from ./db/connectdb.ts
+  }
 
-    }
-
-    private async database(){
-     await connectDb() //connectDb from ./db/connectdb file'
-    }
-
-    private middlewares(){
-      this.app.use(express.json())
-      this.app.use(cors())
-      this.app.use(express.urlencoded({extended: false}))
-    }
-
-    private router(){
-      this.app.use(router) //router from ./router file
-    }
+  server() {
+    const PORT = process.env.PORT || '3000'
+    new Server(PORT) //Server from ./server.ts
+  }
 }
 
-export default new App().app
+new App()

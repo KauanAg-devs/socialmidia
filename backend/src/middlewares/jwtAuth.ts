@@ -7,12 +7,14 @@ interface AuthRequest extends Request {
 }
 
 function jwtAuth(req: AuthRequest, res: Response, next: NextFunction,) {
-    const token = req.header('Authorization')
+    const token = req.header('Authorization')    
     if(!token) return res.status(401).json({msg: `token not provided`});
 
-    jwt.verify(token, process.env.JWTSECRETKEY as string, (error, user)=>{
+    jwt.verify(token.split(' ')[1], process.env.JWTSECRETKEY as string, (error, user)=>{
      if(error) return res.status(403).json({msg: `token not allowed`})
      req.user = user
+    console.log(req.user);
+    
     next()
     })    
 }
